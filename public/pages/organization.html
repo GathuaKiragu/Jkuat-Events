@@ -1,8 +1,8 @@
 <div class="jumbotron">
-	<h1 class="text-center" id="welcome">Welcome, Organization User! </h1>
+	<h1 class="text-center" id="welcome">Welcome Admin </h1>
 
     <p id="message"></p>
-	
+
 	<p class="text-center">{{ message }}</p>
 
     <style>
@@ -109,12 +109,12 @@
     }
 
     @-webkit-keyframes animatezoom {
-        from {-webkit-transform: scale(0)} 
+        from {-webkit-transform: scale(0)}
         to {-webkit-transform: scale(1)}
     }
-        
+
     @keyframes animatezoom {
-        from {transform: scale(0)} 
+        from {transform: scale(0)}
         to {transform: scale(1)}
     }
 
@@ -142,7 +142,7 @@
 
 
     <div id="id01" class="modal">
-      
+
       <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -155,7 +155,7 @@
 
           <label><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" ng-model="user">
-            
+
           <button class="loginbtn" onclick="document.getElementById('id01').style.display='none';login()" ng-click="init(user)">Login</button>
           <input type="checkbox" checked="checked"> Remember me
         </div>
@@ -168,7 +168,7 @@
     </div>
 
     <div id="id02" class="modal">
-      
+
       <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -184,7 +184,7 @@
 
           <label><b>Re-enter Password</b></label>
           <input type="password" placeholder="Re-enter Password" name="psw1">
-            
+
           <button class="loginbtn" onclick="document.getElementById('id02').style.display='none';alert('Thanks for your registration!')">Register</button>
         </div>
 
@@ -195,7 +195,7 @@
     </div>
 
     <div id="id03" class="modal" ng-controller="mainController">
-      
+
       <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -244,7 +244,7 @@
                 modal.style.display = "none";
             }
         }
-        
+
         var logedIn = false;
         function login() {
             logedIn = !logedIn;
@@ -269,7 +269,7 @@
             $scope.init = function(name, id){
                 //This function is sort of private constructor for controller
                 $scope.id = id;
-                $scope.name = name; 
+                $scope.name = name;
                 //Based on passed argument you can make a call to resource
                 //and initialize more objects
                 //$resource.getMeBond(007)
@@ -282,7 +282,7 @@
         <button class="btn btn-link" type="button" style="width:auto;float:left" onclick="document.getElementById('id02').style.display='block'"> Register</button>
     </div>
 
-    
+
 
     <div id="orginfo" style="display:none">
         <button class="btn btn-default" type="button" onclick="login()" style="width:auto"><font color="black">Logout</font></button>&nbsp;&nbsp;
@@ -296,7 +296,7 @@
     		<div class="panel panel-default">
     		    <!-- Default panel contents -->
     		    <div class="panel-heading"> Listed Events </div>
-    			
+
     		</div>
         </div>
 
@@ -321,5 +321,5 @@
     		</div>
         </div>
     </div>
-	
+
 </div>

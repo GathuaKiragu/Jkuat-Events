@@ -45,9 +45,11 @@
     }
   </style>
   <!-- SCROLLS -->
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <!-- SPELLS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
@@ -71,31 +73,29 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <div class="well">
-    <nav class="navbar navbar-default">
-      <div class="container1" style="margin-top:10px">
+  <div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <center>
-          <a class="navbar-brand" href="#/">
-            <img src="images/jkuat-logo.png" style="width:80px;height:80px;">
-          </a>
-        </center>
-        <center><h3>EVENTS NOTIFICATION WEBSITE</h3></center>
-
-        <br>
-
-          <hr>
-          <ul class="nav navbar-nav" style="margin-top:29px">
-            <li><a href="#/"><i class="fa fa-home"></i> All</a></li>
-            <li><a href="#organization"><i class="fa fa-comment" aria-hidden="true"></i> Organization Home</a></li>
-            <li><a href="#student"><i class="fa fa-user"></i> Student Home</a></li>
-          </ul>
+          <a class="navbar-brand" href="#/">Jkuat Events</a>
         </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/">Home</a></li>
+          <li><a href="#/student">Browse Events</a></li>
+          <li><a href="/#About">About Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/#faqs">FAQs</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd2rzKIHYpXSibnD0xs8S09Wvyw_h8dX78kA871QbT3Fz5jJw/viewform">Register Your Event</a></li>
+          <!-- <li><a href="#/organization"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        </ul>
       </div>
     </nav>
-    <center><h1>JKUAT EVENTS NOTIFICATION WEBSITE</h1></center>
-  </div>
-  <div id="main">
+    <!-- End of Navigation Bar -->
+
+    <center>
+      <h3>JKUAT EVENT NOTIFICATION WEBSITE</h3></center>
 
     <!-- angular templating -->
     <!-- this is where content will be injected -->
@@ -115,15 +115,8 @@
       <div class="row">
         <!-- row -->
 
-
-
-
-
-
         <div class="col-lg-12 col-md-12">
           <!-- widgets column center -->
-
-
 
           <ul class="list-unstyled clear-margins">
             <!-- widgets -->
@@ -186,13 +179,9 @@
             <p>Courtesy of Clarice Musera</p>
 
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
 
 
@@ -285,7 +274,5 @@
 
     });
   </script>
-
 </body>
-
 </html>

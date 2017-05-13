@@ -1,5 +1,38 @@
-<div class="jumbotron">
-	<h1 class="text-center">Events</h1>
+
+		<!-- Indicators -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="myCarousel" data-slide-to="1"></li>
+			<li data-target="myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="http://www.matransportation.com/wp-content/uploads/2016/10/635829657534301084-1758770885_pledgemusicsuccess.imgopt1000x70.jpg" alt="Los Angeles" style="width:100%; height:400px;">
+			</div>
+
+			<div class="item">
+				<img src="http://www.businessdailyafrica.com/image/view/-/2749282/highRes/1034245/-/maxw/900/-/tuykp7/-/taifa.jpg" alt="Chicago" style="width:100%; height:400px">
+			</div>
+
+			<div class="item">
+				<img src="http://www.kubamba.com/uploads/5/5/2/6/55266079/8542146_orig.jpg" alt="New york" style="width:100%; height:400px">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Next</span>
+		</a> -->
+	</div>
+	<h1 class="text-center">Feature Events</h1>
 
 	<style>
 		.img {
@@ -126,12 +159,12 @@
 	    }
 
 	    @-webkit-keyframes animatezoom {
-	        from {-webkit-transform: scale(0)} 
+	        from {-webkit-transform: scale(0)}
 	        to {-webkit-transform: scale(1)}
 	    }
-	        
+
 	    @keyframes animatezoom {
-	        from {transform: scale(0)} 
+	        from {transform: scale(0)}
 	        to {transform: scale(1)}
 	    }
 
@@ -146,25 +179,35 @@
 	        }
 	    }
 	</style>
+	<!-- <p class="text-center">{{ message }}</p>
+	<div class="dropdown">
+     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Event Categories
+     <span class="caret"></span></button>
+     <ul class="dropdown-menu">
+       <li><a type="link" ng-click="cat = ''; thisWeek = false; message = 'All the awesome events!'">All Events</a></li>
+       <li><a type="link" ng-click="cat = 'free_food'; thisWeek = false; message = 'All about food.'">Food</a></li>
+       <li><a type="link" ng-click="cat = 'performing_arts'; thisWeek = false; message = 'All about arts.'">Arts</a></li>
+     </ul>
+   </div> -->
 
-    <p class="text-center">{{ message }}</p>
 	<div class="row tabbar">
 		<div class="col-md-3">
 			<a type="button" class="btn btn-primary btn-lg" ng-click="cat = ''; thisWeek = false; message = 'All the awesome events!'">All</a>
 	    </div>
 		<div class="col-md-3">
-			<a type="button" class="btn btn-warning btn-lg" ng-click="cat = 'free_food'; thisWeek = false; message = 'All about food.'">Free Food</a>
+			<a type="button" class="btn btn-success btn-lg" ng-click="cat = 'free_food'; thisWeek = false; message = 'All about food.'">Free Food</a>
 		</div>
 		<div class="col-md-3">
 			<a type="button" class="btn btn-success btn-lg" ng-click="cat = 'performing_arts'; thisWeek = false; message = 'All about arts.'">Performing Arts</a>
 		</div>
 		<div class="col-md-3">
-			<a type="button" class="btn btn-danger btn-lg" ng-click="cat = ''; thisWeek = true; message = 'Events this week.'">This Week</a>
+			<a type="button" class="btn btn-success btn-lg" ng-click="cat = ''; thisWeek = true; message = 'Events this week.'">This Week</a>
 		</div>
 	</div>
+	<br>
 
 	<div id="id" class="modal">
-      
+
       <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -189,17 +232,16 @@
 
 	          <label><b>Liked by</b></label>&nbsp;&nbsp;&nbsp;{{currEvent.peopleFav}}<br>
 
-	          <a class="btn btn-link" href="map.html">Map</a>
-				
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
+        <div class="container">
           <button type="button" onclick="document.getElementById('id').style.display='none'" class="cancelbtn">Cancel</button>
-          <button type="button" onClick="download('myfilename.ics')" class="downloadbtn">Download</button>
+					<br>
+          <!-- <button type="button" onClick="download('myfilename.ics')" class="downloadbtn">Download</button> -->
         </div>
       </form>
     </div>
-	
+
 	<div class="row">
 		<div ng-repeat="event in events | orderBy : orderByDate | filter:{category:cat} | thisWeekFilter: thisWeek" class="list-group col-md-6">
 		    <div href="#" class="list-group-item success col-md-6" style="height:200px">
@@ -208,16 +250,18 @@
 				<p class="list-group-item-text">{{ event.date }}</p>
 				<p class="list-group-item-text">{{ event.time }}</p>
 				<p class="list-group-item-text">
-					<a onclick="document.getElementById('id').style.display='block'" ng-click="setCurr(event)">
-				  Details
-					</a>
+					<button class="btn btn-default" onclick="document.getElementById('id').style.display='block'" ng-click="setCurr(event)">
+				  View Event Details
+				</button>
 				</p>
+				<br>
+
 				<!--  -->
 				<p class="list-group-item-text">
-					<a ng-if="event.favorite==false" ng-click="addToFavorite(event)">Add to Favorite </a>
-					<a ng-if="event.favorite==true" ng-click="removeFromFavorite(event)">Remove from Favorite </a>
+					<button class="btn btn-success" ng-if="event.favorite==false" ng-click="addToFavorite(event)">Add to Favorite </button>
+					<button class="btn btn-success" ng-if="event.favorite==true" ng-click="removeFromFavorite(event)">Remove from Favorite </button>
 				</p>
-				
+
 		    </div>
 		    <div class="img">
 				<img style="float:right" ng-src="{{ event.pic }}" class="img" alt="Event Image Not Available">
