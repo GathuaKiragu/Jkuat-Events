@@ -112,7 +112,7 @@
 	          date: '04/24/2017',
 	          time: '19:00',
 	          favorite: false,
-	          pic: 'http://www.clicked.co.ke/upload/news/image_1485100839_38533181.jpg',
+	          pic: 'images/5.jpg',
 	          recommended: true
 	        }, {
 	          id: 2,
@@ -126,7 +126,7 @@
 	          date: '01/25/2017',
 	          time: '13:00',
 	          favorite: false,
-	          pic: 'http://www.jkuat.ac.ke/wp-content/uploads/2014/01/44443.jpg',
+	          pic: 'images/6.jpg',
 	          recommended: true
 	        }, {
 	          id: 3,
@@ -136,11 +136,11 @@
 	          people: 43,
 	          location: 'CLB',
 	          category: 'performing_arts',
-	          host: 'PL2Y',
+	          host: 'Wilbroda',
 	          date: '12/11/2016',
 	          time: '20:00',
 	          favorite: false,
-	          pic: 'https://pbs.twimg.com/media/COP4szeWgAEaoJm.jpg',
+	          pic: 'images/9a.jpg',
 	          recommended: false
 	        },{
 	          id: 4,
@@ -154,7 +154,7 @@
 	          date: '02/11/2017',
 	          time: '19:00',
 	          favorite: false,
-	          pic: 'http://www.jkuat.ac.ke/wp-content/uploads/2013/10/Outgoing-JKUSO-Secretary-General-Edwin-Jalango-left-cast-his-vote-in-the-Tuesday-polls.jpg',
+	          pic: 'images/10.jpg',
 	          recommended: false
 	        },{
 	          id: 5,
@@ -168,7 +168,7 @@
 	          date: '06/22/2017',
 	          time: '19:00',
 	          favorite: false,
-	          pic: 'https://i.ytimg.com/vi/C_hFtt_NPBw/hqdefault.jpg',
+	          pic: 'images/3.jpg',
 	          recommended: true
 	        },{
 	          id: 6,
@@ -182,7 +182,7 @@
 	          date: '02/11/2017',
 	          time: '20:00',
 	          favorite: false,
-	          pic: 'http://www.kubamba.com/uploads/5/5/2/6/55266079/8542146_orig.jpg',
+	          pic: 'images/85.jpg',
 	          recommended: true
 	        },{
 	          id: 7,
@@ -196,7 +196,7 @@
 	          date: '10/05/2017',
 	          time: '17:00',
 	          favorite: false,
-	          pic: 'http://www.musicnotes.com/blog/wp-content/uploads/Auditions-750x450.jpg',
+	          pic: 'images/2.jpg',
 	          recommended: true
 	        },{
 	          id: 8,
@@ -210,7 +210,7 @@
 	          date: '12/15/2017',
 	          time: '16:00',
 	          favorite: false,
-	          pic: 'http://www.jkuat.ac.ke/userfiles/image/news/babaroa-dec-2011-001.jpg',
+	          pic: 'images/1.jpg',
 	          recommended: true
 	        },{
 	          id: 9,
@@ -224,7 +224,7 @@
 	          date: '12/9/2016',
 	          time: '19:00',
 	          favorite: false,
-	          pic: 'https://3.bp.blogspot.com/-7c5nWc82Zro/WBG6_mZoEZI/AAAAAAADXIc/XWNb0Tuh76UB94zxRboQBI8Kdgfr34iigCLcB/s640/31.JPG',
+	          pic: 'images/8.JPG',
 	          recommended: false
 	        },{
 	          id: 10,
@@ -238,7 +238,7 @@
 	          date: '04/27/2017',
 	          time: '14:00',
 	          favorite: false,
-						pic: 'http://discover.jkuat.ac.ke/wp-content/uploads/2016/05/IMG_2545-800x445.jpg',
+						pic: 'images/9.jpg',
 	          recommended: true
 	        },{
 	          id: 11,
@@ -252,7 +252,7 @@
 	          date: '12/9/2016',
 	          time: '17:30',
 	          favorite: false,
-	          pic: 'http://discover.jkuat.ac.ke/wp-content/uploads/2016/05/IMG_2545-800x445.jpg',
+	          pic: 'images/4.jpg',
 	          recommended: true
 	        }
         ];
