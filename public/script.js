@@ -98,7 +98,7 @@
 	        favorite: false,
 	        pic: 'images/event.png',
 	        recommended: false
-		}
+		};
 		$rootScope.events = [
 	        {
 	          id: 1,
@@ -289,27 +289,27 @@
 	          description: 'SU Election 2016 (added from Facebook)',
 	          peopleFav: 34,
 	          people : 73,
-	          location: 'Olin 1st floor',
+	          location: 'CLB',
 	          category: 'internal',
-	          host: 'SU',
-	          date: '12/31/2016',
+	          host: 'Student Union',
+	          date: '12/31/2017',
 	          time: '13:00',
-	          pic: 'images/election.png',
-	          recommended: false
+	          pic: 'http://www.jkuat.ac.ke/wp-content/uploads/2016/02/Students-cast-their-votes-during-the-polls-300x200.jpg',
+	          recommended: true
 	        },
 	        {
 	          id: 15,
-	          title: 'SU Hackathon',
-	          description: 'Come join the first hackthon hosted by SU! (added from Facebook)',
+	          title: 'Google Hackathon',
+	          description: 'Come join the first hackthon hosted by Google! (added from Facebook)',
 	          peopleFav: 50,
 	          people : 33,
-	          location: 'DUC 240',
-	          category: 'other',
-	          host: 'SU',
+	          location: 'Graduation Square',
+	          category: 'thisWeek',
+	          host: 'Google Kenya',
 	          date: '12/12/2016',
 	          time: '18:00',
-	          pic: 'images/hackathon.jpg',
-	          recommended: false
+	          pic: 'http://amhamogus.com/blog/wp-content/uploads/2016/09/IMG_6447-1024x768.jpg',
+	          recommended: true
 	        },
 	        {
 	          id: 16,
@@ -340,7 +340,7 @@
 	          recommended: false
 	        });
 
-        }
+        };
 	    $rootScope.orderByDate = function(item) {
 		    var parts = item.date.split('/');
 		    var number = parseInt(parts[2] + parts[0] + parts[1]);
@@ -350,17 +350,17 @@
 
 		$rootScope.addEvent = function() {
 			$rootScope.events.push($rootScope.newEvent);
-		}
+		};
 
 		$rootScope.setCurr = function(e) {
 			$rootScope.currEvent = e;
-		}
+		};
 
 		$rootScope.edit = function(e) {
 			$rootScope.newEvent = e;
 			var index = $rootScope.events.indexOf(e);
   			$rootScope.events.splice(index, 1);
-		}
+		};
 
 		$rootScope.getDataSource = function(host, events) {
 			var result = [];
@@ -370,42 +370,42 @@
 				}
 			}
 			return result;
-		}
+		};
 
 		$rootScope.getFavoriteEvents = function(events) {
 			var result = [];
 			for (var i = 0; i < events.length; i++) {
-				if (events[i].favorite == true) {
+				if (events[i].favorite === true) {
 					result.push(events[i]);
 				}
 			}
 			return result;
-		}
+		};
 
 		$rootScope.getRecommendedEvents = function(events) {
 			var result = [];
 			for (var i = 0; i < events.length; i++) {
-				if (events[i].recommended == true) {
+				if (events[i].recommended === true) {
 					result.push(events[i]);
 				}
 			}
 			return result;
-		}
+		};
 
 		$rootScope.getSavedEvents = function(events, savedEvents) {
 			var result = [];
 			for (var i = 0; i < events.length; i++) {
-				if (true == events[i].favorite) {
+				if (true === events[i].favorite) {
 					result.push(events[i]);
 				}
 			}
-			for (var i = 0; i < savedEvents.length; i++) {
-				if (true == savedEvents[i].favorite) {
-					result.push(savedEvents[i]);
+			for (var x = 0; x < savedEvents.length; x++) {
+				if (true === savedEvents[x].favorite) {
+					result.push(savedEvents[x]);
 				}
 			}
 			return result;
-		}
+		};
 
 		$rootScope.getDataByUser = function(events) {
 			var result = [];
@@ -415,35 +415,35 @@
 				}
 			}
 			return result;
-		}
+		};
 
 
 		$rootScope.init = function (user) {
 			$rootScope.orgUser = user;
-		}
+		};
 
 
 		$rootScope.addToFavorite = function(event) {
             var index = $rootScope.events.indexOf(event);
   			$rootScope.events[index].favorite = true;
   			$rootScope.events[index].recommended = false;
-		}
+		};
 
 		$rootScope.removeFromFavorite = function(event) {
             var index = $rootScope.events.indexOf(event);
           	$rootScope.events[index].favorite = false;
 
-		}
+		};
 
 		$rootScope.removeFromRecommendations = function(event) {
             var index = $rootScope.events.indexOf(event);
             $rootScope.events[index].recommended = false;
-		}
+		};
 
 		$rootScope.remove = function(item) {
   			var index = $rootScope.events.indexOf(item);
   			$rootScope.events.splice(index, 1);
-		}
+		};
 
 	});
 

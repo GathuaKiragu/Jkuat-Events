@@ -137,10 +137,8 @@
     </style>
 
 	<!-- <p class="text-center">{{ message }}</p> -->
-	<button class="btn btn-warning" onclick="document.getElementById('id').style.display='block'">Please Input Your Details Here</button>
 
 	<div id="id" class="modal">
-
       <form class="modal-content animate">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -182,13 +180,12 @@
       </form>
     </div>
 	<br/><br/><br>
-	<div class="panel panel-default">
+	<div class="well">
 	  <!-- Default panel contents -->
-	  <div class="panel-heading"> Recommended Events </div>
+	  <h1> Recommended Events </h1>
 			<div ng-repeat="event in getRecommendedEvents(events) | orderBy : orderByDate" class="list-group">
-		  	<a class="list-group-item" style="height:220px">
 			    <img style="float:right" ng-src="{{ event.pic }}" class="img" alt="Event Image Not Available">
-			    <h4 class="list-group-item-heading">{{ event.title }}</h4>
+			    <h3 class="list-group-item-heading">{{ event.title }}</h3>
 			    <p class="list-group-item-text">{{ event.description }}</p>
 			    <p class="list-group-item-text">Location: {{ event.location }}</p>
 			    <p class="list-group-item-text">Date: {{ event.date }}</p>
@@ -196,9 +193,9 @@
 			    <button class="btn btn-success" ng-click="addToFavorite(event)" onclick="alert('Added to favorite')">Add to Favorite</button>
 			    <button class="btn btn-danger" ng-click="removeFromRecommendations(event)">Not Interested</button>
 			    <button class="btn btn-primary" onclick="alert('We look forward to your visit!')">Will Attend</button>
-					<button class="btn btn-info" onClick="download('myfilename.ics')">Download</button>
+					<!-- <button class="btn btn-info" onClick="download('myfilename.ics')">Download</button> -->
+					<a class="btn btn-warning" href="https://docs.google.com/forms/d/e/1FAIpQLSd1CX50Hd94AaQ555qa5ZygfrjrRfkqe42kRBK8dNr1RcnjfQ/viewform">Register For Event</a>
 		      <span class="label label-success">Friends going: {{event.people}}</span>
-		  </a>
 			<br>
 			<br>
 		</div>
@@ -207,14 +204,15 @@
 	  <!-- Default panel contents -->
 	  <div class="panel-heading"> Favorite Events </div>
 		<div ng-repeat="event in getFavoriteEvents(events) | orderBy : orderByDate" class="list-group">
-		  <a class="list-group-item">
-		    <h4 class="list-group-item-heading">{{ event.title }}</h4>
+			<div class="jumbotron">
+		    <h3 class="list-group-item-heading">{{ event.title }}</h3>
 		    <p class="list-group-item-text">{{ event.description }}</p>
 		    <p class="list-group-item-text">Location: {{ event.location }}</p>
 		    <p class="list-group-item-text">Date: {{ event.date }}</p>
 		    <p class="list-group-item-text">Time: {{ event.time }}</p>
 		    <button class="btn btn-danger" ng-click="removeFromFavorite(event)">Remove from Favorite</button>
-		  </a>
+				<a class="btn btn-warning" href="https://docs.google.com/forms/d/e/1FAIpQLSd1CX50Hd94AaQ555qa5ZygfrjrRfkqe42kRBK8dNr1RcnjfQ/viewform">Register For Event</a>
+		  </div>
 		</div>
 	</div>
 

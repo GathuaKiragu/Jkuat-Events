@@ -1,6 +1,6 @@
 {
-  "name": "washuevents",
-  "version": "0.2.5",
+  "name": "jkuatevents",
+  "version": "0.0.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "5.9.1"

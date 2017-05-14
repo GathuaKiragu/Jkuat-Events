@@ -38,7 +38,7 @@ app.listen(app.get('port'), function() {
 
 // var eventSchema = mongoose.Schema({
 //   title: String,
-//   description: String, 
+//   description: String,
 //   category: String,
 //   date: String
 // });
@@ -52,7 +52,7 @@ app.listen(app.get('port'), function() {
 
 //   var newEvent = new Event({
 //     title: event.title,
-//     description: event.description, 
+//     description: event.description,
 //     category: event.category,
 //     date: event.date
 //   });
