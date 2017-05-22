@@ -1,276 +1,65 @@
 <!DOCTYPE html>
-
 <!-- define angular app -->
 <html ng-app="scotchApp">
-
 <head>
-  <style>
-    /* Optional: Makes the sample page fill the window. */
-
-    @import url('https://fonts.googleapis.com/css?family=Amiri|Poiret+One');
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      text-align: center;
-      color: green;
-      font-family: 'Amiri', serif;
-    }
-
-    .navbar-brand img {
-      height: 50px;
-      width: 50px;
-    }
-
-    .jumbotron .row .col-md-3 .btn {
-      width: 70%;
-    }
-
-    .jumbotron .tabbar {
-      height: 100px;
-    }
-
-    .right {
-      right: -10px;
-      margin-top: 20px;
-      position: absolute;
-    }
-
-    .container1 {
-      height: 120px;
-    }
-  </style>
   <!-- SCROLLS -->
+  <title>Jkuat Events</title>
+  <meta name="description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codeply">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-  <!-- SPELLS -->
-
+  <link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
+  <link rel="stylesheet" href="./stylesheets/animate.min.css" />
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="./stylesheets/styles.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="jquery.min.js"></script> -->
-  <script src="bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  </head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
-<script src="script.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#/"><i class="ion-ios-analytics-outline"></i>Jkuat Events</a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-navbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="page-scroll" href="#/">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#/videos">Video Gallery</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="https://docs.google.com/forms/d/e/1FAIpQLSd2rzKIHYpXSibnD0xs8S09Wvyw_h8dX78kA871QbT3Fz5jJw/viewform">Register Event</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#last">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" data-toggle="modal" href="#aboutModal">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <!-- define angular controller -->
 
 <body ng-controller="mainController">
-  <div id="fb-root">
-  </div>
-  <div>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#/">Jkuat Events</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Home</a></li>
-          <li><a href="#/student">Browse Events</a></li>
-          <li><a href="/#About">About Us</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/#faqs">FAQs</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd2rzKIHYpXSibnD0xs8S09Wvyw_h8dX78kA871QbT3Fz5jJw/viewform">Register Your Event</a></li>
-          <!-- <li><a href="#/organization"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-        </ul>
-      </div>
-    </nav>
-    <!-- End of Navigation Bar -->
-    <!-- angular templating -->
-    <!-- this is where content will be injected -->
+
     <div ng-view></div>
-    <h1 style="color=blue;">Welcome To Jkuat Events Website</h1>
-
-  </div>
-
-  <!--   <div id="map"></div>
- -->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-  <!--footer-->
-  <footer class="footer1 text-center">
-    <div class="container">
-
-      <div class="row">
-        <!-- row -->
-
-        <div class="col-lg-12 col-md-12">
-          <!-- widgets column center -->
-
-          <ul class="list-unstyled clear-margins">
-            <!-- widgets -->
-
-            <li class="widget-container widget_recent_news">
-              <!-- widgets list -->
-
-              <h1 class="title-widget">Contact Details </h1>
-
-              <div class="footerp">
-
-                <h2 class="title-median">Jomo Kenyatta University of Agriculture And Technology Events</h2>
-                <p><b>Email id:</b> <a href="mailto:claricemusera@gmail.com">claricemusera@gmail.com</a></p>
-                <p><b>Helpline Numbers </b>
-
-                  <b style="color:#ffc106;">(8AM to 10PM):</b> +254700204385</p>
-
-                <p><b>P0 BOX:</b>6200-00200 Nairobi Kenya</p>
-              </div>
-
-              <div class="social-icons">
-
-                <ul class="nomargin">
-
-                  <a href="https://www.facebook.com/jkuatEvents"><i class="fa fa-facebook-square fa-3x social-fb" id="social"></i></a>
-                  <a href="https://twitter.com/JkuatEvents"><i class="fa fa-twitter-square fa-3x social-tw" id="social"></i></a>
-                  <a href="https://plus.google.com/JkuatEvents"><i class="fa fa-google-plus-square fa-3x social-gp" id="social"></i></a>
-                  <a href="mailto:jkuatevents@gmail.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
-
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!--header-->
-
-  <div class="footer-bottom text-center">
-
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-          <div class="copyright">
-
-            2017, JKUAT Events, All rights reserved
-
-          </div>
-
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-          <div class="design">
-
-            <p>Courtesy of Clarice Musera</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <script>
-    function saveFile(url) {
-      // Get file name from url.
-      var filename = url.substring(url.lastIndexOf("/") + 1).split("?")[0];
-      var xhr = new XMLHttpRequest();
-      xhr.responseType = 'blob';
-      xhr.onload = function() {
-        var a = document.createElement('a');
-        a.href = window.URL.createObjectURL(xhr.response); // xhr.response is a blob
-        a.download = filename; // Set the file name.
-        a.style.display = 'none';
-        document.body.appendChild(a);
-        a.click();
-        delete a;
-      };
-      xhr.open('GET', url);
-      xhr.send();
-    }
-
-
-    function download(file) {
-      // var a = document.getElementById("a");
-      // var file = new Blob([text], {type: type});
-      // a.href = URL.createObjectURL(file);
-      // a.download = name;
-      window.location = file;
-    }
-
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {
-          lat: 38.646,
-          lng: -90.31
-        },
-        zoom: 14
-      });
-      var myLatLng = {
-        lat: 38.646,
-        lng: -90.31
-      };
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Event is here!'
-      });
-
-      var infoWindow = new google.maps.InfoWindow({
-        map: map
-      });
-
-      // Try HTML5 geolocation.
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Current location');
-          map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        });
-      } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    }
-    $(document).ready(function() {
-
-      $('.onshow').on('click', function() {
-        google.maps.event.trigger(map, "resize");
-      });
-    });
-
-    $('#clickModal').on('click', function() {
-      alert("click!");
-      google.maps.event.trigger(map, "resize");
-
-    });
-  </script>
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=334385583589722";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
+    <script src="js/angular-background.js"></script>
 </body>
 </html>

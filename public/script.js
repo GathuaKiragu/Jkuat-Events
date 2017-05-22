@@ -22,6 +22,10 @@
 				templateUrl : 'pages/arts.html',
 				controller  : 'artsController'
 			})
+			.when('/videos', {
+				templateUrl : 'pages/videos.html',
+				controller  : 'videoController'
+			})
 
 			// route for the login page
 			.when('/login', {
@@ -43,6 +47,10 @@
 				templateUrl : 'pages/student.html',
 				controller  : 'studentController'
 			})
+			.when('/featuredevents', {
+				templateUrl : 'pages/featuredevents.html',
+				controller  : 'featuredeventsController'
+			})
 			// route for the student page
 			.when('/organization', {
 				templateUrl : 'pages/organization.html',
@@ -62,6 +70,7 @@
 				controller  : 'profileController'
 			});
 	})
+
 	.directive('mapCanvas', function() {
     return {
         restrict: 'E',
@@ -75,7 +84,6 @@
         }
     };
 });
-
 	// create the controller and inject Angular's $scope
 	scotchApp.controller('mainController', function($scope, $rootScope, $window) {
 		// create a message to display in our view
@@ -456,7 +464,10 @@
 		$scope.message = 'All about arts.';
 
 	});
+	scotchApp.controller('featuredeventsController', function($scope, $rootScope) {
+		$scope.message = 'All about events.';
 
+	});
 	scotchApp.controller('loginController', function($scope, $rootScope) {
 		$scope.message = 'Login page.';
 	});
@@ -478,14 +489,20 @@
 		$scope.favorite = false;
 		$scope.notInterested = false;
 	});
+
 	scotchApp.controller('organizationController', function($scope, $rootScope) {
 		$scope.message = 'Organization page.';
 	});
+
     scotchApp.controller('eventController', function($scope, $rootScope) {
 		$scope.message = 'Event page.';
 	});
+
 	scotchApp.controller('profileController', function($scope, $rootScope) {
 		$scope.message = 'Profile page.';
+	});
+	scotchApp.controller('videoController', function($scope, $rootScope) {
+		$scope.message = 'Video page.';
 	});
 
 	scotchApp.filter('thisWeekFilter', function() {
